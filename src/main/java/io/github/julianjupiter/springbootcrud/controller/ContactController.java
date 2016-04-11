@@ -21,7 +21,7 @@ public class ContactController {
         this.contactService = contactService;
     }
     
-    @RequestMapping(value = { "", "/", "/home" })
+    @RequestMapping(value = { "", "/" })
     public String index(Model model) {
         model.addAttribute("activePage", "contacts");
         model.addAttribute("contacts", this.contactService.getAllContacts());
